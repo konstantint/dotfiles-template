@@ -28,5 +28,5 @@ install: stow
 .PHONY: stow  # Install ("restow") dotfiles.
 # NB: --dotfiles would be a convenient option, but https://github.com/aspiers/stow/issues/33
 stow:
-	stow --ignore='^README.md' -t ~ -d $(THISDIR) --restow $(PACKAGES)
+	stow --ignore='^README.md' --ignore='^.gitmodules' --ignore='^.gitignore' -t ~ -d $(THISDIR) --restow $(PACKAGES)
 
